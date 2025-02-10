@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* Font sizes */
+    --font-size-h1: 2.71rem;
+    --font-size-h2: 2.71rem;
+    --font-size-h3: 1.75rem;
+    --font-size-subtitle: 0.965rem;
+    --font-size-body: 0.996rem;
+    --font-size-body-lg: 1.041rem;
+    --font-size-body-sm: 1.041rem;
+    --font-size-body-xs: 0.973rem;
+    --font-size-button-lg: 0.75rem;
+
+    --gradient-1: linear-gradient(267deg, #00F0FF 4.01%, #5200FF 57.55%, #FF2DF7 114.97%);
+
+    @media screen and (min-width: 1024px) {
+        /* Font sizes */
+        --font-size-h1: 4.539rem;
+        --font-size-h2: 3.125rem;
+        --font-size-h3: 2.5rem;
+        --font-size-subtitle: 1.563rem;
+        --font-size-body: 1.25rem;
+        --font-size-body-lg: 1.25rem;
+        --font-size-body-sm: 1.213rem;
+        --font-size-body-xs: 0.973rem;
+        --font-size-button-lg: 1.213rem;
+    }
+}
+
+@layer components {
+    .focus-styles {
+        @apply focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-brand-blue;
+    }
+}
+
+.btn-display {
+    position: relative;
+    border-radius: 9999px;
+}
+
+.btn-display::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    border: 1px solid transparent;
+    background: var(--gradient-1);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+}
+
+.review-image {
+    position: relative;
+    border-radius: 3.125rem;
+    overflow: hidden;
+}
+
+.review-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 3.125rem;
+    border: 3px solid transparent;
+    background: var(--gradient-1);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+}
+
+.gradient-input-container {
+    position: relative;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.gradient-input-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    border: 1px solid transparent;
+    background: var(--gradient-1);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+}
